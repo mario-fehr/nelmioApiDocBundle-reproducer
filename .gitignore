@@ -8,3 +8,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+DS_Store
+.fleet
+.idea
+.reports
+.vscode
