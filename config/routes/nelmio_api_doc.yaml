@@ -4,8 +4,19 @@ app.swagger:
     methods: GET
     defaults: { _controller: nelmio_api_doc.controller.swagger }
 
-## Requires the Asset component and the Twig bundle
-## $ composer require twig asset
+# Expose your documentation as ReDoc UI compliant
+#app.redocly:
+#    path: /api/doc
+#    methods: GET
+#    defaults: { _controller: nelmio_api_doc.controller.redocly }
+
+# Expose your documentation as stoplight UI compliant
+app.stoplight:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.stoplight }
+
+# Expose your documentation as Swagger UI compliant
 #app.swagger_ui:
 #    path: /api/doc
 #    methods: GET
