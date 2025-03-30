@@ -33,21 +33,8 @@
                 ],
                 "properties": {
                     "items": {
-                        "description": "List of users",
-                        "oneOf": [
-                            {
-                                "type": "array",
-                                "items": {
-                                    "nullable": true
-                                }
-                            },
-                            {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "nullable": true
-                                }
-                            }
-                        ]
+                        "type": "array",
+                        "items": {}
                     },
                     "totalCount": {
                         "type": "integer"

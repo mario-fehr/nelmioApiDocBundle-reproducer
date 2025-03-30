@@ -11,7 +11,7 @@ readonly class UserResponse extends PaginatedResponse
 {
     public function __construct(
         #[Property(description: "List of users")]
-        public array $items,
+        array $items,
         int $totalCount,
     ) {
         parent::__construct(
