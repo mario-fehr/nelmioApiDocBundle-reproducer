@@ -10,7 +10,6 @@ use OpenApi\Attributes\Property;
 readonly class UserResponse extends PaginatedResponse
 {
     public function __construct(
-        /** @var list<User> $items */
         #[Property(description: "List of users")]
         public array $items,
         int $totalCount,

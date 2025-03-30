@@ -34,32 +34,23 @@
                 "properties": {
                     "items": {
                         "description": "List of users",
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/User"
-                        }
+                        "oneOf": [
+                            {
+                                "type": "array",
+                                "items": {
+                                    "nullable": true
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "nullable": true
+                                }
+                            }
+                        ]
                     },
                     "totalCount": {
                         "type": "integer"
-                    }
-                },
-                "type": "object"
-            },
-            "User": {
-                "required": [
-                    "id",
-                    "name",
-                    "email"
-                ],
-                "properties": {
-                    "id": {
-                        "type": "integer"
-                    },
-                    "name": {
-                        "type": "string"
-                    },
-                    "email": {
-                        "type": "string"
                     }
                 },
                 "type": "object"
