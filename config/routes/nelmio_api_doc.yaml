@@ -11,13 +11,13 @@ app.swagger:
 #    defaults: { _controller: nelmio_api_doc.controller.redocly }
 
 # Expose your documentation as stoplight UI compliant
-app.stoplight:
-    path: /api/doc
-    methods: GET
-    defaults: { _controller: nelmio_api_doc.controller.stoplight }
-
-# Expose your documentation as Swagger UI compliant
-#app.swagger_ui:
+#app.stoplight:
 #    path: /api/doc
 #    methods: GET
-#    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
+#    defaults: { _controller: nelmio_api_doc.controller.stoplight }
+
+# Expose your documentation as Swagger UI compliant
+app.swagger_ui:
+    path: /api/doc
+    methods: GET
+    defaults: { _controller: nelmio_api_doc.controller.swagger_ui }
