@@ -1,0 +1,59 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My App",
+        "description": "This is an awesome app!",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/test": {
+            "get": {
+                "operationId": "get_app_test",
+                "responses": {
+                    "200": {
+                        "description": "Returns a Positioning object",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Positioning"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Positioning": {
+                "required": [
+                    "businessModel"
+                ],
+                "properties": {
+                    "businessModel": {
+                        "$ref": "#/components/schemas/BusinessModel"
+                    }
+                },
+                "type": "object"
+            },
+            "BusinessModel": {
+                "required": [
+                    "progress",
+                    "complete"
+                ],
+                "properties": {
+                    "progress": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "complete": {
+                        "title": "Checks if model is complete (properties are not null and arrays non-empty)",
+                        "type": "boolean"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    }
+}
